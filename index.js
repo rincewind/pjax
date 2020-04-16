@@ -280,7 +280,7 @@ Pjax.prototype = {
         // Scroll page to top on new page load
         if (state.options.scrollTo.length > 1) {
           window.scrollTo(state.options.scrollTo[0], state.options.scrollTo[1]);
-        } else {
+        } else if (!state.options.noScroll) {
           window.scrollTo(0, state.options.scrollTo);
         }
       }
